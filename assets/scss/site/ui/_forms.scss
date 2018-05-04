@@ -1,0 +1,9 @@
+/**
+ * 01. Global Form Styles
+ */
+
+
+// 01. Global Form Styles
+input::-ms-clear {
+	display: none !important; // Prevent IE clearing "x"
+}

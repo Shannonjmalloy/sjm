@@ -1,0 +1,46 @@
+@import
+	'bower_components/foundation-sites/scss/util/util',
+	'config/settings',
+	'config/variables'
+;
+
+// Sass utilities
+@import 'bower_components/foundation-sites/scss/util/util';
+
+// Global variables and styles
+@import 'bower_components/foundation-sites/scss/global';
+
+// Components
+@import 'bower_components/foundation-sites/scss/grid/grid';
+@import 'bower_components/foundation-sites/scss/typography/typography';
+@import 'bower_components/foundation-sites/scss/forms/forms';
+@import 'bower_components/foundation-sites/scss/components/visibility';
+@import 'bower_components/foundation-sites/scss/components/float';
+@import 'bower_components/foundation-sites/scss/components/button';
+@import 'bower_components/foundation-sites/scss/components/button-group';
+@import 'bower_components/foundation-sites/scss/components/accordion-menu';
+@import 'bower_components/foundation-sites/scss/components/accordion';
+@import 'bower_components/foundation-sites/scss/components/badge';
+@import 'bower_components/foundation-sites/scss/components/callout';
+@import 'bower_components/foundation-sites/scss/components/close-button';
+@import 'bower_components/foundation-sites/scss/components/flex-video';
+@import 'bower_components/foundation-sites/scss/components/label';
+@import 'bower_components/foundation-sites/scss/components/media-object';
+@import 'bower_components/foundation-sites/scss/components/orbit';
+@import 'bower_components/foundation-sites/scss/components/switch';
+@import 'bower_components/foundation-sites/scss/components/table';
+@import 'bower_components/foundation-sites/scss/components/tabs';
+@import 'bower_components/foundation-sites/scss/components/thumbnail';
+
+@import
+	'config/mixins',
+	'config/typography',
+
+	'plugins/plugins',
+
+	'site/site'
+;
+
+body {
+	background-color: white;
+}

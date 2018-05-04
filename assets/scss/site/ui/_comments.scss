@@ -1,0 +1,110 @@
+/**
+ * 01. Comments Form
+ * 02. Comments List
+ */
+
+// 01. Comments Form
+.comment-form {
+	margin: 0 -#{$form-item-padding} 1rem;
+
+	p[class*="comment-form-"],
+	.form-submit,
+	.logged-in-as {
+		margin: 0;
+		padding: {
+			left: $form-item-padding;
+			right: $form-item-padding;
+		}
+	}
+
+	.form-submit {
+		clear: both;
+	}
+
+	.comment-form-label {
+		display: none;
+
+		.no-placeholder & {
+			display: block;
+		}
+	}
+
+	input,
+	textarea {
+		@include global-form-styles;
+	}
+
+	input[type="submit"] {
+		@include button;
+	}
+}
+
+// 02. Comments List
+.comment-list {
+	list-style: none;
+	margin: 0 0 2rem;
+
+	ol, ul {
+		list-style: none;
+	}
+
+	> .comment {
+		background: $comment-original-bg;
+		border: 1px solid $comment-border-color;
+		border-radius: $comment-border-radius;
+		margin: $comment-gutter 0 0;
+		overflow: hidden;
+	}
+
+	.children {
+		background: $comment-reply-bg;
+		border-top: 1px solid $comment-border-color;
+		margin: 0;
+	}
+}
+
+.comment-body {
+	font-size: .875rem;
+	padding: 2rem 2.5rem;
+
+	p {
+		font-size: inherit;
+	}
+
+	cite {
+		font-style: normal;
+	}
+
+	.comment-author {
+		border: none;
+		display: block;
+		margin: 0 0 1rem;
+		padding: 0;
+	}
+
+	.avatar {
+		display: none;
+	}
+
+	.fn {
+		font-size: .875rem
+	}
+
+	.comment-date-time {
+		color: #cecfd1;
+		font-size: .75rem;
+	}
+}
+
+.comment-reply-link {
+	display: block;
+	margin-top: 1rem;
+}
+
+.bypostauthor > .comment-body {
+	.avatar {
+		border-radius: 5px;
+		display: inline-block;
+		margin-right: .5rem;
+	}
+}

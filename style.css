@@ -1,0 +1,29 @@
+/**
+ * Theme Name:         SJM
+ * Theme URI:          http://shannonmalloy.com
+ * Github Theme URI:   https://github.com/linchpinagency/hatch
+ * Description:        sjm portfolio theme
+ * Version:            1.0.0
+ * Author:             Shannon Malloy
+ * Author URI:         http://shannonmalloy.com
+ *
+ * Text Domain:        sjm
+ *
+ * License:            GPLv3 License
+ * License URI:        http://opensource.org/licenses/GPL-3.0
+ */
+
+/* Additional Notes
+ *
+ * Sass is a CSS pre-compiler that adds in amazing features
+ * such as variables, nested selectors and loops.
+ *
+ * It's also the easiest way to customize Foundation, and this Theme
+ *
+ * All Sass files are located in the /scss folder.
+ *
+ * Please read the README.md file before getting started. More info on how
+ * to use Sass with Foundation can be found here:
+ * http://foundation.zurb.com/docs/sass.html
+ *
+ */

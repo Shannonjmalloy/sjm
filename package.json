@@ -1,0 +1,22 @@
+{
+  "name": "sjm",
+  "title": "SJM",
+  "description": "sjm portfolio theme",
+  "version": "0.1.0",
+  "homepage": "http://shannonmalloy.com",
+  "author": {
+    "name": "Shannon Malloy",
+    "email": "design@shannonmalloy.com",
+    "url": "http://shannonmalloy.com"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-watch": "^4.3.5",
+    "imagemin-pngquant": "^4.2.2"
+  },
+  "keywords": []
+}

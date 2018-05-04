@@ -1,0 +1,44 @@
+/**
+ * 01. Heading
+ * 02. Body
+ * 03. Fields
+ * 04. Footer
+ */
+
+
+// 01. Heading
+.gform_title {
+	
+}
+
+
+// 02. Body
+.gform_fields {
+	list-style: none;
+	margin: 0;
+}
+
+
+// 03. Fields
+.ginput_complex {
+	&.ginput_container_name {
+		margin: 0 -$form-item-padding;
+
+		.name_first,
+		.name_last {
+			float: left;
+			padding: 0 $form-item-padding;
+			width: 50%;
+		}
+	}
+
+	&.ginput_container_address {
+		
+	}
+}
+
+
+// 04. Footer
+.gform_footer {
+	
+}

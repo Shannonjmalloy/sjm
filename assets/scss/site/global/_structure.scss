@@ -1,0 +1,62 @@
+/**
+ * 01. Colors
+ * 02. Spacing
+ * 03. Container
+ */
+
+
+// 01. Colors
+@each $label, $hex in $color-map {
+	.background-#{$label} {
+		background-color: $hex;
+	}
+
+	.color-#{$label} {
+		color: $hex;
+	}
+
+	.links-#{$label} a {
+		color: $hex;
+	}
+}
+
+
+// 02. Spacing
+@include spacing-layout( 'padding' );
+@include spacing-layout( 'margin' );
+
+@include breakpoint(medium up) {
+	@include spacing-layout( 'padding', 'medium' );
+	@include spacing-layout( 'margin', 'medium' );
+}
+
+@include breakpoint(large up) {
+	@include spacing-layout( 'padding', 'large' );
+	@include spacing-layout( 'margin', 'large' );
+}
+
+// 03. Container
+.container {
+	padding: {
+		bottom: map-get($spacing-sizes, small);
+		top: map-get($spacing-sizes, small);
+	};
+
+	@include breakpoint(medium up) {
+		&:not(.small) {
+			padding: {
+				bottom: map-get($spacing-sizes, medium);
+				top: map-get($spacing-sizes, medium);
+			};
+		}
+	}
+
+	@include breakpoint(large up) {
+		&.large {
+			padding: {
+				bottom: map-get($spacing-sizes, large);
+				top: map-get($spacing-sizes, large);
+			};
+		}
+	}
+}
