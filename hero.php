@@ -13,7 +13,7 @@
 ?>
 <header id="homepage-hero" class="container" role="banner">
 	<div class="row">
-		<div class="columns">
+		<div class="hero-heading columns">
 			<h1><?php bloginfo( 'name' ); ?></h1>
 			<h4><?php _e( get_bloginfo( 'description' ), 'sjm' ); ?></h4>
 		</div>
