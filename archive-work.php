@@ -30,35 +30,8 @@
 
                 <?php while ( have_posts() ) : the_post(); ?>
 
-                    <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+                    <?php get_template_part( 'content', 'work' ); ?>
 
-                        <div class="entry-content">
-                            <div class="small-12 medium-4 large-3 columns">
-
-                                <a href="<?php echo get_post_permalink();?>">
-
-                                    <?php if ( has_post_thumbnail() ) : ?>
-                                        <?php the_post_thumbnail( '', array( 'class' => 'th' ) ); ?>
-                                    <?php endif; ?>
-
-                                    <?php the_title( '<p class="entry-title">', '</p>' ); ?>
-                                </a>
-                                <div class="tags"><?php the_tags(); ?></div>
-
-                                <?php
-                                /** This action is documented in includes/Linchpin/hatch-hooks.php */
-                                do_action( 'rebar_post_entry_content_before' ); ?>
-
-                                <?php the_content(); ?>
-
-                                <?php
-                                /** This action is documented in includes/Linchpin/hatch-hooks.php */
-                                do_action( 'rebar_post_entry_content_after' ); ?>
-                            </div>
-                        </div>
-
-
-                    </article>
                 <?php endwhile; ?>
 
                 <?php

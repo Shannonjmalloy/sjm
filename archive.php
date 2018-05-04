@@ -28,9 +28,9 @@
 			/** This action is documented in includes/Linchpin/hatch-hooks.php */
 			do_action( 'rebar_loop_before' ); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+            <?php while ( have_posts() ) : the_post(); ?>
 
-                <?php get_template_part( 'content', 'post' ); ?>
+                <?php get_template_part( 'content', 'work' ); ?>
 
             <?php endwhile; ?>
 
