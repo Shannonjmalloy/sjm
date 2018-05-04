@@ -8,6 +8,7 @@
 .top-bar {
 	height: $topbar-height;
 	line-height: $topbar-height;
+	width: 100%;
 
 	@include breakpoint(medium up) {
 		padding: $topbar-padding-medium;
@@ -22,7 +23,13 @@
 	}
 
 	.top-bar-title {
-		padding: 0;
+		background-color: $white;
+		padding: .5rem;
+		.site-logo {
+			img {
+				max-height: 80px;
+			}
+		}
 	}
 }
 

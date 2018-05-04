@@ -1,0 +1,41 @@
+.single-work {
+
+  /* HEADER */
+  header.featured_image_bg {
+    min-height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
+
+    .entry-title {
+      color: $white;
+      text-align: center;
+    }
+
+    .post-categories {
+      text-align: center;
+      li {
+        list-style: none;
+      }
+    }
+  }
+
+
+  /* CONTENT AREA */
+
+  /* INTRO TO PROJECT */
+  .tags {
+    ul {
+      margin: 0;
+
+      li {
+        list-style: none;
+        padding-bottom: .75rem;
+        line-height: 1.1;
+      }
+    }
+  }
+
+
+}
