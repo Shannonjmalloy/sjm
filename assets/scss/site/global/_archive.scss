@@ -1,0 +1,99 @@
+// WORK
+.post-type-archive-work {
+
+  .loop-work-container {
+
+    article.work {
+      padding: 0;
+      .featured_image_bg {
+        margin: .5rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .work-archive-link {
+          padding: 2rem 1rem;
+          text-align: center;
+          transition: $thumbnail-transition;
+
+          a.graphic-design {
+            &:after {
+              content: "\f114";
+            }
+          }
+
+          a.web-design {
+            &:after {
+              content: "\f179";
+            }
+          }
+
+          a.web-design, a.graphic-design {
+            transition: .25s all;
+            font-size: 0;
+            text-align:center;
+            &:after {
+              font-size: 1.9375rem;
+              padding: 0 .25rem;
+              color: white;
+              font-family: "foundation-icons";
+            }
+          }
+
+          .entry-title {
+            transition: .5s all;
+            color: $white;
+          }
+
+          &:hover {
+            a.web-design, a.graphic-design {
+              &:after {
+                display: none;
+              }
+            }
+            .entry-title {
+              font-size: 14px;
+              font-weight: bold;
+              margin-top: -1.85rem;
+            }
+          }
+        }
+      }
+
+      &.category-web-design {
+        .work-archive-link {
+        background-color: $color-pink;
+
+          &:hover {
+            background-color: rgba( $color-pink, .1 );
+            box-shadow: inset 0 0 0 25px $color-pink;
+          }
+        }
+      }
+
+      &.category-graphic-design {
+        .work-archive-link {
+          background-color: $color-orange;
+          &:hover {
+            background-color: rgba( $color-orange, .1 );
+            box-shadow: inset 0 0 0 25px $color-orange;
+
+          }
+        }
+      }
+
+      &.category-web-design.category-graphic-design {
+        .work-archive-link {
+          background-color: $color-purple;
+
+          &:hover {
+          background-color: rgba( $color-purple, .1 );
+            box-shadow: inset 0 0 0 25px $color-purple;
+          }
+        }
+      }
+
+    }
+
+  }
+}

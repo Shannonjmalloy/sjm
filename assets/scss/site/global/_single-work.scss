@@ -1,22 +1,68 @@
 .single-work {
 
   /* HEADER */
-  header.featured_image_bg {
-    min-height: 250px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 2rem;
+
+  .category-graphic-design{
+    .header {
+      background-color: $color-orange;
+    }
+  }
+
+  .category-web-design  {
+    .header {
+      background-color: $color-pink;
+    }
+  }
+
+  .category-graphic-design.category-web-design {
+    .header {
+      background-color: $color-purple;
+
+    }
+  }
+
+  header {
+    padding: 2rem 0;
+    min-height: 200px;
+      margin-bottom: 2rem;
 
     .entry-title {
+      padding-bottom: 1rem;
       color: $white;
       text-align: center;
     }
 
     .post-categories {
       text-align: center;
-      li {
-        list-style: none;
+      a.graphic-design {
+        &:after {
+          content: "\f114";
+        }
+      }
+
+      a.web-design {
+        &:after {
+          content: "\f179";
+        }
+      }
+
+      a.web-design, a.graphic-design {
+        transition: .25s all;
+        font-size: 0;
+        line-height: 0;
+        text-align: center;
+        &:after {
+          transition: .5s ease all;
+          font-size: 1.9375rem;
+          padding: 0 .5rem;
+          color: white;
+          font-family: "foundation-icons";
+        }
+        &:hover {
+          &:after {
+            color: $black;
+          }
+        }
       }
     }
   }

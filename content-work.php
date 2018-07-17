@@ -11,7 +11,7 @@
  */
 
 $featured_image_bg = ( get_the_post_thumbnail() != '') ? "background-image: url('" . get_the_post_thumbnail_url() . "');" : "background-color: #f7f6ef";
-
+$categories = wp_get_post_terms( get_the_id(), 'category' );
 
 ?>
 
@@ -21,11 +21,17 @@ do_action( 'rebar_post_before' ); ?>
 
     <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-        <header class="featured_image_bg" style="<?php echo $featured_image_bg; ?>">
+        <header class="header">
             <div class="row">
                 <div class="small-12 columns">
                     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-                    <div class="category"><?php the_category(); ?></div>
+                    <div class ="post-categories">
+                        <?php if ( $categories ):
+                            foreach ( $categories as $category ): ?>
+                                <a href="<?php echo get_term_link( $category->term_id, 'category' ); ?>" class="<?php echo $category->slug; ?>"><?php echo $category->name; ?></a>
+                            <?php endforeach;
+                        endif; ?>
+                    </div>
                 </div>
             </div>
         </header>

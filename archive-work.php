@@ -15,8 +15,7 @@
 <?php get_header(); ?>
 
     <div class="row container">
-        <div class="small-12 columns" role="main">
-
+        <div class="small-12 columns loop-work-container" role="main" data-equalizer="">
 
             <?php
             /** This action is documented in includes/Linchpin/hatch-hooks.php */

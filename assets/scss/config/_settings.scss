@@ -51,15 +51,15 @@ $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
         primary: #82D8CF,
-        secondary: #c447a1,
-        success: #54bc6b,
-        warning: #fc8535,
-        alert: #e5336a,
+        secondary: #B53ED6,
+        success: #82D8CF,
+        warning: #FFBA49,
+        alert: #FF5E83,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #c7c7c7;
-$dark-gray: #474645;
-$black: #0a0a0a;
+$light-gray: #9AD1E0;
+$medium-gray: #6E95A0;
+$dark-gray: #465F66;
+$black: #36494E;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
@@ -583,7 +583,7 @@ $thumbnail-border: solid 4px $white;
 $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
-$thumbnail-transition: box-shadow 200ms ease-out;
+$thumbnail-transition: .75s ease all;
 $thumbnail-radius: $global-radius;
 
 // 35. Title Bar
