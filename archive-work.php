@@ -49,6 +49,5 @@
 
             <?php get_template_part( 'images/partials/pagination' ); ?>
         </div>
-        <?php get_sidebar(); ?>
     </div>
 <?php get_footer();
