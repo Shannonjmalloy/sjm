@@ -6,9 +6,11 @@
 // 01. Hero
 #homepage-hero {
 	color: $white;
-	min-height: 450px;
-	background-image: url(../assets/images/Kissing-Timelapse-72.gif);
-	background-position: bottom;
+	text-align: center;
+	padding: 3rem 0;
+	background-color: $primary-color;
+	//background-image: url(../assets/images/Kissing-Timelapse-72.gif);
+	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 

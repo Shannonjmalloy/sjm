@@ -21,9 +21,9 @@ $categories = wp_get_post_terms( get_the_id(), 'category' );
 /** This action is documented in includes/Linchpin/hatch-hooks.php */
 do_action( 'rebar_post_before' ); ?>
 
-    <article <?php post_class( 'small-12 medium-6 large-4 columns' ) ?> id="post-<?php the_ID(); ?>">
+    <article <?php post_class( 'small-12 medium-6 large-4 columns clickable' ) ?> id="post-<?php the_ID(); ?>">
 
-        <div class="featured_image_bg" style="<?php echo $featured_image_bg; ?>" data-equalizer-watch>
+        <div class="featured_image_bg " style="<?php echo $featured_image_bg; ?>" data-equalizer-watch>
             <a href="<?php echo get_post_permalink();?>">
                 <div class="work-archive-link" data-equalizer-watch>
                     <?php the_title( '<h3 class="entry-title">', '</h3>' );

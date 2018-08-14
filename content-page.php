@@ -17,9 +17,6 @@
 do_action( 'rebar_post_before' ); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
-		<h1><?php the_title(); ?></h1>
-	</header>
 
 	<?php
 	/** This action is documented in includes/Linchpin/hatch-hooks.php */

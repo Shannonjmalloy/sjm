@@ -42,6 +42,8 @@
 
 			<?php do_action( 'rebar_content_after' ); ?>
 
+            <?php recent_posts('work'); ?>
+
 		</div>
 	</div>
 

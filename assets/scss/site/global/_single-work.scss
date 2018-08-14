@@ -76,6 +76,7 @@
       margin: 0;
 
       li {
+        font-weight: 400;
         list-style: none;
         padding-bottom: .75rem;
         line-height: 1.1;
@@ -84,4 +85,10 @@
   }
 
 
+}
+
+
+hr {
+  border-bottom: 2px solid $primary-color !important;
+  margin: .5rem 0 1rem !important;
 }

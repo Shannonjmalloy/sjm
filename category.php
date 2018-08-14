@@ -1,6 +1,6 @@
 <?php
 /**
- * Work Archive Template
+ * Category Archive Template
  *
  * Template for display all Work archive pages.
  *
@@ -31,7 +31,7 @@
 
                 <?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php get_template_part( 'partials/loop-work', get_post_type( 'work' ) ); ?>
+                    <?php get_template_part( 'partials/loop-work', get_post_type( 'post' ) ); ?>
 
                 <?php endwhile; ?>
 

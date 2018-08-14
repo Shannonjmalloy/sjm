@@ -33,13 +33,41 @@ $theme = new sjm();
 
 add_filter('pre_get_posts', 'query_post_type');
 function query_post_type($query) {
-    if ( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    if( is_archive() && (is_category() || is_tag()) && empty( $query->query_vars['suppress_filters'] ) ) {
         $post_type = get_query_var('post_type');
         if($post_type)
             $post_type = $post_type;
         else
-            $post_type = array('work','nav_menu_item');
+            $post_type = array('post', 'work');
         $query->set('post_type',$post_type);
         return $query;
     }
 }
+
+function recent_posts($atts, $content = NULL)
+{
+    $atts = shortcode_atts(
+        [
+            'orderby' => 'date',
+            'posts_per_page' => '6',
+            'post_type' => 'work',
+
+        ], $atts, 'recent-posts' );
+
+    $query = new WP_Query( $atts );
+
+    $output = '<ul class="recent-posts">';
+
+    while($query->have_posts()) : $query->the_post();
+
+        $output .= '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a> - <small>' . get_the_date() . '</small></li>';
+
+    endwhile;
+
+    wp_reset_query();
+
+    return $output . '</ul>';
+}
+add_shortcode('recent-posts', 'recent_posts');
+
+

@@ -14,6 +14,8 @@
 
 <?php get_header(); ?>
 
+<?php get_template_part( 'hero' ); ?>
+
 <div class="row container">
 	<div class="small-12 columns" role="main">
 
@@ -50,6 +52,5 @@
 
 		<?php get_template_part( 'images/partials/pagination' ); ?>
 	</div>
-	<?php get_sidebar(); ?>
 </div>
 <?php get_footer();

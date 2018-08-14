@@ -37,20 +37,20 @@ do_action( 'rebar_post_before' ); ?>
         </header>
 
         <div class="entry-content">
-            <div class="row">
+            <div class="row" id="foo">
 
                 <?php
                     /** This action is documented in includes/Linchpin/hatch-hooks.php */
                     do_action( 'rebar_post_entry_content_before' ); ?>
 
-                <div class="small-12 medium-5 large-4 columns">
-                    <div class="tags">
+                <div class="small-12 medium-4 large-3 columns" data-sticky-container>
+                    <div class="tags sticky" data-sticky data-anchor="foo" >
                         <h4>
                         <?php $posttags = get_the_tags();
                         if ($posttags) {
                             echo '<ul>';
                             foreach($posttags as $tag) {
-                                echo '<li>' . $tag->name . '</li>';
+                                echo '<li><a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a></li>';
                             }
                             echo'</ul>';
                         } ?>
@@ -58,9 +58,24 @@ do_action( 'rebar_post_before' ); ?>
                     </div>
                 </div>
 
-                <div class="small-12 medium-7 large-8 columns">
-                    <?php the_content(); ?>
+                <div class="small-12 medium-8 large-9 columns">
+                    <?php if ( get_the_content() ) : ?>
+                        <h2>The Vision</h2><hr/><?php the_content(); ?>
+                    <?php elseif (get_field('Introduction')) : ?>
+                        <h2>The Vision</h2><hr/><?php the_field('Introduction'); ?>
+                    <?php endif; ?>
+
+
+                    <?php if ( get_field('sketches') ) : ?>
+                        <h2>The Process</h2><hr/><div class="sketches"> <?php the_field('sketches') ?></div>
+                    <?php endif; ?>
+
+                    <?php if ( get_field('the_project')) : ?>
+                        <h2>Final Product</h2><hr/><div class="finalproduct"> <?php the_field('the_project') ?></div>
+                    <?php endif; ?>
+
                 </div>
+
 
                     <?php
                     /** This action is documented in includes/Linchpin/hatch-hooks.php */
