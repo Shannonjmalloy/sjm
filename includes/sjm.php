@@ -200,8 +200,9 @@ class sjm {
 	 */
 	function wp_enqueue_scripts() {
 		wp_enqueue_script( 'sjm', 	 get_stylesheet_directory_uri() . '/js/sjm.js', array( 'jquery' ), SJM_VERSION, true );
+        wp_enqueue_script( 'slick-js', get_stylesheet_directory_uri() . '/vendor/slick/slick.js', array( 'jquery' ), '1.8.0' );
 
-	}
+    }
 
 	/**
 	 * Enqueue our theme styles.
@@ -213,7 +214,8 @@ class sjm {
 		wp_enqueue_style( 'app-css', get_stylesheet_directory_uri() . '/css/sjm.css' );
         wp_enqueue_style( 'typekit', '//use.typekit.net/yxo3vya.css', array(), '1.0.0');
         wp_enqueue_style( 'foundation-icons', get_stylesheet_directory_uri() . '/bower_components/foundation-sites/foundation-icons/foundation-icons.css' );
-
+        wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/vendor/slick/slick.css' );
+        wp_enqueue_style( 'slick-theme-css', get_stylesheet_directory_uri() . '/vendor/slick/slick-theme.css' );
 	}
 
 	/*
