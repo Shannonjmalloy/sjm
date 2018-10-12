@@ -18,6 +18,8 @@ sjm.site = function ( $ ) {
     var $window    = $(window),
         $doc       = $(document),
         $body      = $('body'),
+        $photo_slider               = $('.photo-slider'),
+
         self;
 
     return {
@@ -31,6 +33,21 @@ sjm.site = function ( $ ) {
 
 	        // initialize foundation
 	        $doc.foundation();
+
+            if ($photo_slider.length ) {
+                self.photo_slider();
+            }
+        },
+
+        photo_slider : function () {
+            $(document).ready(function(){
+                $photo_slider.slick({
+                    arrows: true,
+                    fade: true,
+                    swipe: true,
+                    adaptiveHeight: true,
+                });
+            });
         }
     };
 } ( jQuery );
