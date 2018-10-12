@@ -25,11 +25,16 @@ include_once( 'includes/Linchpin/hatch.php' );        // Hatch Classes
 include_once( 'includes/Foundation/foundation.php' ); // Foundation Classes
 include_once( 'includes/sjm.php' ); // Theme Class
 
+
+require_once 'includes/sjm/sjm_shortcodes.php'; // Shortcodes
+
 /**
  *	Instantiate our classes.
  */
 
 $theme = new sjm();
+$shortcodes = new sjm_shortcodes();
+
 
 add_filter('pre_get_posts', 'query_post_type');
 function query_post_type($query) {
