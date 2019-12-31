@@ -1,0 +1,18 @@
+p a {
+	font-weight: bold;
+}
+
+hr.purple {
+	border-bottom: 2px solid $color-purple !important;
+    margin: .5rem 0 1rem !important;
+}
+
+hr.orange {
+	border-bottom: 2px solid $color-orange !important;
+    margin: .5rem 0 1rem !important;
+}
+
+hr.pink {
+	border-bottom: 2px solid $color-pink !important;
+    margin: .5rem 0 1rem !important;
+}

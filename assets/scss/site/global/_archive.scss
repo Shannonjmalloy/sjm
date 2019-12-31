@@ -4,7 +4,7 @@
     article.work {
       padding: 0;
       .featured_image_bg {
-        margin: .5rem;
+        margin: 1rem;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -14,19 +14,19 @@
           text-align: center;
           transition: $thumbnail-transition;
 
-          a.graphic-design {
+          a.design {
             &:after {
               content: "\f114";
             }
           }
 
-          a.web-design {
+          a.dev {
             &:after {
               content: "\f179";
             }
           }
 
-          a.web-design, a.graphic-design {
+          a.dev, a.design {
             transition: .25s all;
             font-size: 0;
             text-align:center;
@@ -44,7 +44,7 @@
           }
 
           &:hover {
-            a.web-design, a.graphic-design {
+            a.dev, a.design {
               &:after {
                 display: none;
               }
@@ -58,7 +58,7 @@
         }
       }
 
-      &.category-web-design {
+      &.category-dev {
         .work-archive-link {
         background-color: $color-pink;
 
@@ -69,7 +69,7 @@
         }
       }
 
-      &.category-graphic-design {
+      &.category-design {
         .work-archive-link {
           background-color: $color-orange;
           &:hover {
@@ -80,7 +80,7 @@
         }
       }
 
-      &.category-web-design.category-graphic-design {
+      &.category-dev.category-design {
         .work-archive-link {
           background-color: $color-purple;
 

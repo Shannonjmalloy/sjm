@@ -35,6 +35,8 @@ else {
 }
 
 ?>
+
+<?php if ( ! is_front_page()) : ?>
 <header id="homepage-hero" class="container" role="banner"  <?php if ( ! is_archive() )  { echo 'style="background-image: url( ' .  $hero_image . ' ) "; ' ; } ?> >
 	<div class="row">
 		<div class="hero-heading columns">
@@ -42,3 +44,4 @@ else {
 		</div>
 	</div>
 </header>
+<?php endif; ?>

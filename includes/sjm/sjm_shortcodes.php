@@ -18,7 +18,6 @@ class sjm_shortcodes {
         //add shortcode before creating the function
         add_shortcode( 'recent-work',    array( $this, 'recent_work') );
         add_shortcode( 'featured-work',    array( $this, 'featured_work') );
-
     }
 
     function recent_work( $atts ) {
@@ -201,5 +200,5 @@ class sjm_shortcodes {
 
         return $output;
 
-    }
+    }  
 }

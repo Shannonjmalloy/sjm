@@ -6,10 +6,10 @@
 
 // 01. Top bar
 .top-bar {
-	box-shadow: 0px 5px 5px rgba(0,0,0,.1);
 	height: $topbar-height;
 	line-height: $topbar-height;
 	width: 100%;
+	z-index: 100;
 
 	@include breakpoint(medium up) {
 		padding: $topbar-padding-medium;
@@ -20,6 +20,7 @@
 	.top-bar-right {
 		height: $topbar-item-height;
 		line-height: $topbar-item-height;
+		width: auto;
 		width: auto;
 	}
 
@@ -152,6 +153,15 @@
 	}
 }
 
+.right-off-canvas-toggle.icon-menu {
+	&:before {
+		content: "\f169";
+		font-family: 'foundation-icons';
+		font-size: 25px;
+	}
+}
+
+
 .off-canvas {
 	height: 100%;
 
@@ -199,6 +209,15 @@
 
 	.is-drilldown {
 		height: 100% !important;
+	}
+
+	.is-drilldown-submenu {
+		background-color: $primary-color;
+		.js-drilldown-back {
+			a:before{
+			 border-color: transparent white transparent transparent;
+			}
+		}
 	}
 
 	.dropdown {

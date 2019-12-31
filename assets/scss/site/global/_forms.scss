@@ -1,0 +1,42 @@
+textarea {
+	box-shadow: none;
+}
+
+[type='text']:focus, 
+[type='password']:focus, 
+[type='date']:focus, 
+[type='datetime']:focus, 
+[type='datetime-local']:focus, 
+[type='month']:focus, 
+[type='week']:focus, 
+[type='email']:focus, 
+[type='number']:focus, 
+[type='search']:focus, 
+[type='tel']:focus, 
+[type='time']:focus, 
+[type='url']:focus, 
+[type='color']:focus,
+textarea:focus {
+	box-shadow: none !important;
+}
+
+[type='submit'] {
+	display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem 0;
+    padding: 0.85em 1em;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    transition: background-color 0.25s ease-out,color 0.25s ease-out;
+    font-size: 0.9rem;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    background-color: #82D8CF;
+    color: #fefefe;
+    &:hover {
+        background-color: #5accc0;
+    	color: #fefefe;
+    }
+}

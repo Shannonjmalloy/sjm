@@ -13,6 +13,7 @@
 $featured_image_bg = ( get_the_post_thumbnail() != '') ? "background-image: url('" . get_the_post_thumbnail_url() . "');" : "background-color: #f7f6ef";
 $categories = wp_get_post_terms( get_the_id(), 'category' );
 
+$post_date = get_the_date( 'Y' );
 ?>
 
 <?php
@@ -32,6 +33,9 @@ do_action( 'rebar_post_before' ); ?>
                             <?php endforeach;
                         endif; ?>
                     </div>
+                    <div class="post-date">
+                       <h5><?php echo $post_date; ?></h5>
+                    </div>
                 </div>
             </div>
         </header>
@@ -43,7 +47,7 @@ do_action( 'rebar_post_before' ); ?>
                     /** This action is documented in includes/Linchpin/hatch-hooks.php */
                     do_action( 'rebar_post_entry_content_before' ); ?>
 
-                <div class="small-12 medium-4 large-3 columns" data-sticky-container>
+                <div class="small-12 medium-4 large-3 columns tag-container" data-sticky-container>
                     <div class="tags sticky" data-sticky data-anchor="foo" >
                         <h4>
                         <?php $posttags = get_the_tags();

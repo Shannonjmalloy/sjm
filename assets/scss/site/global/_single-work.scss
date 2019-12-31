@@ -2,19 +2,19 @@
 
   /* HEADER */
 
-  .category-graphic-design{
+  .category-design{
     .header {
       background-color: $color-orange;
     }
   }
 
-  .category-web-design  {
+  .category-dev  {
     .header {
       background-color: $color-pink;
     }
   }
 
-  .category-graphic-design.category-web-design {
+  .category-design.category-dev {
     .header {
       background-color: $color-purple;
 
@@ -34,19 +34,19 @@
 
     .post-categories {
       text-align: center;
-      a.graphic-design {
+      a.design {
         &:after {
           content: "\f114";
         }
       }
 
-      a.web-design {
+      a.dev {
         &:after {
           content: "\f179";
         }
       }
 
-      a.web-design, a.graphic-design {
+      a.dev, a.design {
         transition: .25s all;
         font-size: 0;
         line-height: 0;
@@ -65,22 +65,43 @@
         }
       }
     }
+
+    .post-date {
+      text-align: center;
+      color: $white;
+      padding-top: 1rem;
+    }
   }
 
 
   /* CONTENT AREA */
 
   /* INTRO TO PROJECT */
-  .tags {
-    ul {
-      margin: 0;
 
-      li {
-        font-weight: 400;
-        list-style: none;
-        padding-bottom: .75rem;
-        line-height: 1.1;
+  .tag-container {
+    margin-top: 10px;
+    .tags {
+      ul {
+        margin: 0;
+
+        li {
+          font-weight: 400;
+          list-style: none;
+          padding-bottom: .75rem;
+          line-height: 1.1;
+        }
       }
+
+    &.sticky.is-anchored {
+      margin-top: 0 !important;
+      padding-top: 0;
+    }
+
+    &.sticky.is-stuck{
+      margin-top: $topbar-height !important;
+      padding-top: 1rem;
+      z-index: 0 ;
+    }
     }
   }
 
