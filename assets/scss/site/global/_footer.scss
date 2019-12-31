@@ -33,15 +33,49 @@
 			padding: $menu-item-padding;
 		}
 	}
+
+	#menu-social-menu {
+
+		[class^="fi-"] {
+			&::before {
+  				transition: all 0.2s;
+			 	color: $black;
+			  	font-size: 30px;
+			  	padding: 15px;
+			}
+
+			a {
+				display: block;
+	  			color: transparent;
+	  			font-size: 0;
+	  			text-align:center;
+	  		}
+		}
+	
+	}
+
 }
+
+
 
 
 // 03. Sub Footer
 .sub-footer {
+	line-height: 40px;
 	background-color: $subfooter-bg-color;
 	color: $subfooter-text-color;
 
 	a {
 		color: $subfooter-link-color;
+		transition: $button-transition;
+		&:hover {
+			color: $light-gray;
+		}
+	}
+
+	.fi-social-github::before {
+		font-size: 20px;
+		margin-left: 5px;
+		vertical-align: middle;
 	}
 }

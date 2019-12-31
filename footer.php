@@ -29,21 +29,9 @@
 
 								<?php dynamic_sidebar( 'footer-widgets' ); ?>
 
+
 							</div>
-						</div>
-
-						<?php
-						/** This action is documented in includes/Linchpin/hatch-hooks.php */
-						do_action( 'rebar_main_footer_inner_after' ); ?>
-					</div>
-
-					<div class="sub-footer container small">
-						<?php
-						/** This action is documented in includes/Linchpin/hatch-hooks.php */
-						do_action( 'rebar_sub_footer_inner_before' ); ?>
-
-						<div class="row">
-							<div class="small-12 medium-6 columns">
+							<div class="small-12 columns text-center social">
 								<?php
 									wp_nav_menu( array(
 										'container'       => false,
@@ -61,9 +49,24 @@
 									) );
 								?>
 							</div>
+						</div>
 
-							<div class="small-12 medium-6 columns text-right">
-								<?php echo sprintf( '&copy; %s %s. All Rights Reserved.', date( 'Y' ), __( get_bloginfo( 'name' ), 'sjm' ) ); ?>
+						<?php
+						/** This action is documented in includes/Linchpin/hatch-hooks.php */
+						do_action( 'rebar_main_footer_inner_after' ); ?>
+					</div>
+
+					<div class="sub-footer container small">
+						<?php
+						/** This action is documented in includes/Linchpin/hatch-hooks.php */
+						do_action( 'rebar_sub_footer_inner_before' ); ?>
+
+						<div class="row">
+							<div class="small-12 columns text-center">
+								<p> <?php 
+									echo 'Forked WP theme scaffold by <a href="https://github.com/linchpin/hatch">Linchpin<span class="fi-social-github"></span></a> <br/>';	
+									echo sprintf( 'Handcrafted by me &copy; %s', date( 'Y' ), __( get_bloginfo( 'name' ), 'sjm' ));
+								?> </p>
 							</div>
 						</div>
 
