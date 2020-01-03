@@ -37,11 +37,20 @@
 	#menu-social-menu {
 
 		[class^="fi-"] {
-			&::before {
-  				transition: all 0.2s;
-			 	color: $black;
+			text-align: center;
+    		display: inline-block;
+
+    		&::before {
+  				transition: all 0.5s;
+			 	color: $white;
 			  	font-size: 30px;
 			  	padding: 15px;
+			}
+
+			&:hover {
+				&::before {
+					color: $black;
+				}
 			}
 
 			a {
