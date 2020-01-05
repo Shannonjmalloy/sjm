@@ -15,6 +15,8 @@
 <?php get_header(); ?>
 
 <?php get_template_part( 'hero' ); ?>
+<?php get_template_part( 'partials/filter-buttons' ); ?>
+
 
     <div class="row container">
         <div class="small-12 columns loop-work-container" role="main" data-equalizer="">
