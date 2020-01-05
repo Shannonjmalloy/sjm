@@ -80,25 +80,27 @@ do_action( 'rebar_post_before' ); ?>
 
                 </div>
 
-
                     <?php
                     /** This action is documented in includes/Linchpin/hatch-hooks.php */
                     do_action( 'rebar_post_entry_content_after' ); ?>
 
-                <div class="small-12 columns">
-
+                    <!--
                     <footer>
-                        <?php wp_link_pages( array(
+                        <?php/* wp_link_pages( array(
                             'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'sjm' ),
                             'after'  => '</p></nav>',
-                        ) ); ?>
+                        ) ); */?>
                     </footer>
+                    -->
 
-                </div>
             </div>
         </div>
 
-        <?php get_template_part( 'partials/edit-controls' ); ?>
+        <div class="related-work-footer row">
+            <div class="column small-12 ">
+                <?php echo do_shortcode('[related-work]'); ?>
+            </div>
+        </div>
 
         <?php
 
