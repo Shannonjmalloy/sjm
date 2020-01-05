@@ -21,6 +21,10 @@
     }
   }
 
+  .header {
+    background-color: $primary-color;
+  }
+
   header {
     padding: 2rem 0;
     min-height: 200px;
@@ -112,4 +116,13 @@
 hr {
   border-bottom: 2px solid $primary-color !important;
   margin: .5rem 0 1rem !important;
+}
+
+/* RELATED WORK */
+
+.related-work-footer {
+  padding: 1rem 0;
+  #related-work {
+
+  }
 }
