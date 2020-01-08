@@ -23,7 +23,7 @@ if ( is_archive()) {
 
     $the_title_name = '<h1>' . $title_name . '</h1>';
 
-    if ( is_category() || is_tag() ) {
+    if ( is_category() || is_tag() || is_tax() ) {
         $current_archive = get_queried_object();
         $archive_name    = $current_archive->name;
 

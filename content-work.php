@@ -12,6 +12,10 @@
 
 $featured_image_bg = ( get_the_post_thumbnail() != '') ? "background-image: url('" . get_the_post_thumbnail_url() . "');" : "background-color: #f7f6ef";
 $categories = wp_get_post_terms( get_the_id(), 'category' );
+$roles = wp_get_post_terms( get_the_id(), 'role' );
+$employers = wp_get_post_terms( get_the_id(),'employer');
+$project_years = wp_get_post_terms( get_the_id(),'project_year');
+$programs = wp_get_post_terms( get_the_id(),'programs');
 
 $post_date = get_the_date( 'Y' );
 ?>
@@ -47,8 +51,8 @@ do_action( 'rebar_post_before' ); ?>
                     /** This action is documented in includes/Linchpin/hatch-hooks.php */
                     do_action( 'rebar_post_entry_content_before' ); ?>
 
-                <div class="small-12 medium-4 large-3 columns tag-container" data-sticky-container>
-                    <div class="tags sticky" data-sticky data-anchor="foo" >
+                <div class="small-12 medium-4 large-3 columns tag-container"><!-- data-sticky-container -->
+                    <div class="tags">  <!-- "sticky"  data-sticky data-anchor="foo"-->
                         <h4>
                         <?php $posttags = get_the_tags();
                         if ($posttags) {
@@ -59,7 +63,42 @@ do_action( 'rebar_post_before' ); ?>
                             echo'</ul>';
                         } ?>
                         </h4>
-                    </div>
+                        <?php if( $roles ) { ?>
+                            <span class="role">
+                            Role: 
+                                <?php foreach ($roles as $role) {
+                                    $role_link = get_term_link( $role );
+                                    echo '<a href="' . esc_url( $role_link ) . '">' . $role->name . '</a>'; 
+                                } ?>
+                            </span><br/>
+                        <?php } ?>
+                        <?php if( $employers ) { ?>
+                            <span class="employer">
+                            Employer: 
+                                <?php foreach ($employers as $employer) {
+                                    $employer_link = get_term_link( $employer );
+                                    echo '<a href="' . esc_url( $employer_link ) . '">' . $employer->name . '</a>'; 
+                                } ?>
+                            </span><br/>
+                        <?php } ?>
+                        <?php if( $project_years ) { ?>
+                            <span class="project_year">
+                            Year: 
+                                <?php foreach ($project_years as $project_year) {
+                                    $project_year_link = get_term_link( $project_year );
+                                    echo '<a href="' . esc_url( $project_year_link ) . '">' . $project_year->name . '</a>'; 
+                                } ?>
+                            </span><br/>
+                        <?php } ?>
+                        <?php if( $programs ) { ?>
+                            <span class="programs">
+                                Programs:
+                                <?php foreach($programs as $program) {
+                                    $program_link = get_term_link( $program );
+                                    echo '<a href="' . esc_url( $program_link ) . '">' . $program->name . '</a>';} ?>
+                            </span><br/>
+                        <?php } ?>
+                   </div>
                 </div>
 
                 <div class="small-12 medium-8 large-9 columns">
