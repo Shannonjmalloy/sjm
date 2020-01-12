@@ -81,15 +81,6 @@ do_action( 'rebar_post_before' ); ?>
                                 } ?>
                             </span><br/>
                         <?php } ?>
-                        <?php if( $project_years ) { ?>
-                            <span class="project_year">
-                            Year: 
-                                <?php foreach ($project_years as $project_year) {
-                                    $project_year_link = get_term_link( $project_year );
-                                    echo '<a href="' . esc_url( $project_year_link ) . '">' . $project_year->name . '</a>'; 
-                                } ?>
-                            </span><br/>
-                        <?php } ?>
                         <?php if( $programs ) { ?>
                             <span class="programs">
                                 Programs:
