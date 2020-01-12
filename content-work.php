@@ -114,18 +114,19 @@ do_action( 'rebar_post_before' ); ?>
                     /** This action is documented in includes/Linchpin/hatch-hooks.php */
                     do_action( 'rebar_post_entry_content_after' ); ?>
 
-                    <!--
-                    <footer>
-                        <?php/* wp_link_pages( array(
-                            'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'sjm' ),
-                            'after'  => '</p></nav>',
-                        ) ); */?>
-                    </footer>
-                    -->
-
             </div>
         </div>
-
+        <!--prev next posts-->
+        <div class="row">
+            <div class="small-12 columns"><hr/></div>
+            <div class="link next small-6 columns">
+                <div class="show-for-medium-up"><?php previous_post_link( '%link', '%title', TRUE ); ?></div>
+            </div> 
+            <div class="link previous small-6 columns">
+                <div class="show-for-medium-up text-right"><?php next_post_link( '%link', '%title', TRUE ); ?></div>
+            </div>
+        </div>
+        <!--related posts-->
         <div class="related-work-footer row">
             <div class="column small-12 ">
                 <?php echo do_shortcode('[related-work]'); ?>
