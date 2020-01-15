@@ -71,19 +71,24 @@
     }
 
     .post-date {
-      text-align: center;
-      color: $white;
-      padding-top: 1rem;
+        text-align: center;
+      h5 {
+          color: $white;
+          padding-top: 1rem;
+          transition: $button-transition;
+      }
     }
   }
 
+
+/* SIDE BAR */
 
   /* CONTENT AREA */
 
   /* INTRO TO PROJECT */
 
   .tag-container {
-    margin-top: 10px;
+    margin: 10px 0;
     .tags {
       ul {
         margin: 0;
@@ -108,8 +113,6 @@
     }
     }
   }
-
-
 }
 
 
@@ -121,6 +124,7 @@ hr {
 /* RELATED WORK */
 
 .related-work-footer {
+  padding: 1rem 0;
   #related-work {
 
   }
