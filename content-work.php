@@ -129,6 +129,7 @@ do_action( 'rebar_post_before' ); ?>
         <!--related posts-->
         <div class="related-work-footer row">
             <div class="column small-12 ">
+                <hr/>
                 <?php echo do_shortcode('[related-work]'); ?>
             </div>
         </div>
