@@ -117,15 +117,15 @@ do_action( 'rebar_post_before' ); ?>
             </div>
         </div>
         <!--prev next posts-->
-        <div class="row">
+        <!--<div class="row">
             <div class="small-12 columns"><hr/></div>
             <div class="link next small-6 columns">
-                <div class="show-for-medium-up"><?php previous_post_link( '%link', '%title', TRUE ); ?></div>
-            </div> 
-            <div class="link previous small-6 columns">
-                <div class="show-for-medium-up text-right"><?php next_post_link( '%link', '%title', TRUE ); ?></div>
+                <div class="show-for-medium-up"><?php next_post_link( '%link', '%title' ); ?></div>
             </div>
-        </div>
+            <div class="link previous small-6 columns">
+                <div class="show-for-medium-up text-right"><?php previous_post_link( '%link', '%title' ); ?></div>
+            </div> 
+        </div>-->
         <!--related posts-->
         <div class="related-work-footer row">
             <div class="column small-12 ">
